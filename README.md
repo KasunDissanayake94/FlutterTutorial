@@ -1,16 +1,21 @@
-# shoppingapp
-
-A new Flutter application.
-
-## Getting Started
+# Flutter Tutorial
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Content:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1: Text Widget <br>
+2: Center Widget<br>
+3: Material Widget<br>
+4: Scaffold Widget<br>
+5: AppBar Widget<br>
+6. Row and Column<br>
+7. Raised Button<br>
+8. Alert Dialog<br>
+9. Box Constrains<br>
+10. Container<br>
+11. Image<br>
+12. Size Margin and Padding<br>
+13. ListView<br>
+14. Floating Action Button<br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
