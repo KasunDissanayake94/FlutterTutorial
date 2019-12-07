@@ -1,4 +1,4 @@
-# shoppingapp
+# Flutter Tutorial
 
 A new Flutter application.
 
