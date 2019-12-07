@@ -1,7 +1,5 @@
 # Flutter Tutorial
 
-This project is a starting point for a Flutter application.
-
 Content:
 
 1: Text Widget <br>
