@@ -59,8 +59,19 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.white),
                         )),
                   ],
-                )
+                ),
+                ImageShow()
               ],
             )));
+  }
+}
+
+class ImageShow extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage('images/bookImage.png');
+    Image image = Image(image: assetImage, width: 250.0, height: 250.0,);
+    return Container(child: image,);
   }
 }
