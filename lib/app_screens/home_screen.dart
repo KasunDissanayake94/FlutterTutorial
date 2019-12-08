@@ -60,7 +60,8 @@ class HomeScreen extends StatelessWidget {
                         )),
                   ],
                 ),
-                ImageShow()
+                ImageShow(),
+                ShowButton()
               ],
             )));
   }
@@ -73,5 +74,40 @@ class ImageShow extends StatelessWidget {
     AssetImage assetImage = AssetImage('images/bookImage.png');
     Image image = Image(image: assetImage, width: 250.0, height: 250.0,);
     return Container(child: image,);
+  }
+}
+
+class ShowButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 30.0),
+      width: 250.0,
+      height: 50.0,
+      child: RaisedButton(
+          color: Colors.deepOrange,
+          child: Text(
+            "Click here",
+            style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w700),
+          ),
+          elevation: 6.0,
+          onPressed: () => popUp(context)),
+    );
+  }
+
+  void popUp(BuildContext context) {
+    var alertDialog = AlertDialog(
+      title: Text("Button Pressed Successfully"),
+      content: Text("Thank You"),
+    );
+
+    showDialog(
+        context: context,
+        builder: (BuildContext context) => alertDialog);
   }
 }
