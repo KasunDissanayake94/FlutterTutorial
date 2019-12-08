@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(
-      MaterialApp(
-        title: "Interest Counter",
-        home: StatefullWidgetExample(),
-      )
-  );
-}
-
 class StatefullWidgetExample extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
