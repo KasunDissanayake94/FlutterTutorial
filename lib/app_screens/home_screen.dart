@@ -1,23 +1,113 @@
 import 'package:flutter/material.dart';
 
-
-class HomeScreen extends StatelessWidget{
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return  Material(
-      color: Colors.lightBlueAccent,
-      child: Center(
-        child: Text(
-          "Hello Kasun",
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 40.0
+    return Center(
+        child: Container(
+            padding: EdgeInsets.only(left: 10.0, top: 40.0),
+            alignment: Alignment.center,
+            color: Colors.deepPurple,
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Text(
+                          "Native",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(
+                              fontSize: 35.0,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        )),
+                    Expanded(
+                        child: Text(
+                          "Android",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        )),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Text(
+                          "Hybrid",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(
+                              decoration: TextDecoration.none,
+                              fontSize: 35.0,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        )),
+                    Expanded(
+                        child: Text(
+                          "Flutter",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(
+                              decoration: TextDecoration.none,
+                              fontSize: 20.0,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        )),
+                  ],
+                ),
+                ImageShow(),
+                ShowButton()
+              ],
+            )));
+  }
+}
+
+class ImageShow extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage('images/bookImage.png');
+    Image image = Image(image: assetImage, width: 250.0, height: 250.0,);
+    return Container(child: image,);
+  }
+}
+
+class ShowButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 30.0),
+      width: 250.0,
+      height: 50.0,
+      child: RaisedButton(
+          color: Colors.deepOrange,
+          child: Text(
+            "Click here",
+            style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w700),
           ),
-        ),
-      ),
+          elevation: 6.0,
+          onPressed: () => popUp(context)),
     );
   }
 
+  void popUp(BuildContext context) {
+    var alertDialog = AlertDialog(
+      title: Text("Button Pressed Successfully"),
+      content: Text("Thank You"),
+    );
+
+    showDialog(
+        context: context,
+        builder: (BuildContext context) => alertDialog);
+  }
 }
