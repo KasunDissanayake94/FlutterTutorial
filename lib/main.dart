@@ -7,17 +7,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build returns a widget
-    return
-      MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "Flutter Tutorial",
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("Home Screen"),
-          ),
-          body: HomeScreen()
-        )
-    );
+    return HomeScreen();
   }
 
 }
